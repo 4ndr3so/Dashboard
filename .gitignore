@@ -1,0 +1,57 @@
+### OS / Editor ###
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.log
+
+# IntelliJ / VSCode / Eclipse
+.idea/
+.vscode/
+*.iml
+*.class
+.project
+.settings/
+bin/
+
+### Java / Spring Boot ###
+target/
+*.jar
+*.war
+*.ear
+
+# Local configs / secrets
+src/main/resources/application-secret.properties
+src/main/resources/*.local.properties
+*.env
+.env.*
+
+### Node / React / Angular ###
+node_modules/
+dist/
+build/
+.npm/
+.yarn/
+.pnpm-debug.log
+package-lock.json
+yarn.lock
+
+# Coverage / testing
+coverage/
+.nyc_output/
+*.lcov
+
+### Docker ###
+/docker-compose.override.yml
+/.docker/
+*.pid
+
+### Logs ###
+*.log
+logs/
+spring.log
+
+### Misc ###
+# If you export data or cache it
+/tmp/
+.cache/
