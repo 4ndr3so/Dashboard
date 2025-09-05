@@ -59,6 +59,15 @@ public class LicenseService {
     return cache.getOrCompute("animal:" + year, sup);
   }
 
+  //multiple years
+  public Map<Integer, Map<String, Long>> animalTrend(List<Integer> years) {
+    Map<Integer, Map<String, Long>> out = new LinkedHashMap<>();
+    for (int year : years) {
+        out.put(year, countByAnimalType(year));
+    }
+    return out;
+}
+
   public List<FsaCount> countByFsa(int year) {
     Supplier<Map<String, Long>> sup =
         () -> fetchAll(year).stream()

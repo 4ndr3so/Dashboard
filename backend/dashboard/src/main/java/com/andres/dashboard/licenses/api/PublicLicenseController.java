@@ -33,6 +33,12 @@ public class PublicLicenseController {
         return svc.countByAnimalType(year);
     }
 
+    @GetMapping("/trend/by-animal")
+        public Map<Integer, Map<String, Long>> animalTrend(
+                @RequestParam List<Integer> years) {
+            return svc.animalTrend(years);
+        }
+
     // Licenses per FSA (2025): GET /api/licenses/2025/by-fsa
     @GetMapping("/{year}/by-fsa")
     public List<FsaCount> byFsa(@PathVariable int year) {

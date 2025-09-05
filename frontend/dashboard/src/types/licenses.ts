@@ -1,0 +1,1 @@
+export type AnimalCounts = Record<"Dog" | "Cat" | string, number>;
